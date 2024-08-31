@@ -1,28 +1,34 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import Login from './Components/Login'
-import { Route, Routes } from 'react-router-dom'
-import Users from './Components/Users'
-import Contact from './Components/Users'
-import About from './Components/About'
-import Navbar from './Components/Navbar'
+import "./App.css";
+import Login from "./Components/Login";
+import { Route, Routes } from "react-router-dom";
+import Users from "./Components/Users";
+import Contact from "./Components/Contact";
+import About from "./Components/About";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import Card from "./Components/Card";
+import Footer from "./Components/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-  
+
   return (
-    <div className='h-screen w-full'>
+    <div className="h-screen w-full">
       <Navbar />
+      {/* <Card/> */}
+
+      <Outlet/>
+
       <Routes>
-        <Route to="/" element={<Login/>}></Route>
-        <Route to="/users" element={<Users/>}></Route>
-        <Route to="/about" element={<About/>}></Route>
-        <Route to="/contact" element={<Contact/>}></Route>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/users" element={<Users />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
-      
-      <Login/>
+      <Footer/>
+
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

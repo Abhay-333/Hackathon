@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Users from "./Users";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar-custom px-4 lg:px-6 py-3 shadow-md fixed w-full z-10 top-0">
+    <nav className="navbar-custom px-4 lg:px-6 py-3 shadow-md w-full z-10 top-0">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a href="#" className="flex items-center">
           <img
@@ -60,19 +61,20 @@ const Navbar = () => {
                     : "nav-link block py-2 pr-4 pl-3 rounded hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-300 lg:p-0"
                 }
               >
-                Home
+                Log In
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/portfolio"
+                to="/users"
+                path={<Users />}
                 className={({ isActive }) =>
                   isActive
                     ? "nav-link block py-2 pr-4 pl-3 rounded lg:bg-transparent lg lg:p-0"
                     : "nav-link block py-2 pr-4 pl-3 rounded hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-300 lg:p-0"
                 }
               >
-                Portfolio
+                Users
               </NavLink>
             </li>
             <li>
@@ -87,18 +89,7 @@ const Navbar = () => {
                 About
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/blog"
-                className={({ isActive }) =>
-                  isActive
-                    ? "nav-link block py-2 pr-4 pl-3 rounded lg:bg-transparent lg lg:p-0"
-                    : "nav-link block py-2 pr-4 pl-3 rounded hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-gray-300 lg:p-0"
-                }
-              >
-                Blog
-              </NavLink>
-            </li>
+            
             <li>
               <NavLink
                 to="/contact"
@@ -112,6 +103,9 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
+
+      
+
         </div>
       </div>
     </nav>
