@@ -18,7 +18,7 @@ const Login = () => {
 
   const handleSubmit = (e)=>{
     e.preventDefault()
-    navigate('/')
+    navigate('/users')
   }
 
  
@@ -41,7 +41,7 @@ const Login = () => {
         // className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 relative "
         // className="bg-[#1F2937] relative"
       >
-        <div className="box text-white h-[25rem] bg-[#1F2937] overflow-hidden w-[23rem] rounded-xl">
+        <div className="box text-white h-[25rem] bg-[#2f3e53] overflow-hidden w-[23rem] rounded-xl">
           <h1 className="text-center mt-10 text-4xl font-bold">Login</h1>
 
           <form onSubmit={(e) => handleSubmit(e)}>

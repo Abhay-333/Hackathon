@@ -9,24 +9,26 @@ import Home from "./Components/Home";
 import Card from "./Components/Card";
 import Footer from "./Components/Footer";
 import { Outlet } from "react-router-dom";
+import UserDetails from "./Components/UserDetails";
+
 
 function App() {
-
   return (
     <div className="h-screen w-full">
       <Navbar />
       {/* <Card/> */}
 
-      <Outlet/>
+      <Outlet />
 
       <Routes>
         <Route path="/" element={<Login />}></Route>
-        <Route path="/users" element={<Users />}></Route>
+        <Route path="/users" element={<Users />}>
+          {/* <Route path="userDetails" element={<UserDetails />}></Route> */}
+        </Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
-      <Footer/>
-
+      <Footer />
     </div>
   );
 }

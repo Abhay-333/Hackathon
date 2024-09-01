@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Users from "./Users";
+// import logo from "../Resources/png/logo-white.png";
+import "../Resources/fonts/Gugi.css";
+import "../Resources/fonts/Gugi.ttf"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,14 +16,14 @@ const Navbar = () => {
     <nav className="navbar-custom px-4 lg:px-6 py-3 shadow-md w-full z-10 top-0">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a href="#" className="flex items-center">
-          <img
-            src="https://via.placeholder.com/40"
-            className="h-10 mr-3"
-            alt="Logo"
-          />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap">
+          <div className="w-[100%] overflow-hidden rounded-md">
+            {/* <img src={logo} className="mr-3" alt="Logo" /> */}
+            <h1 className="ffont-gugi uppercase">Virtual Vortex</h1>
+          </div>
+
+          {/* <span className="self-center text-2xl font-semibold whitespace-nowrap">
             My Portfolio
-          </span>
+          </span> */}
         </a>
 
         <button
@@ -89,7 +92,7 @@ const Navbar = () => {
                 About
               </NavLink>
             </li>
-            
+
             <li>
               <NavLink
                 to="/contact"
@@ -103,9 +106,6 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
-
-      
-
         </div>
       </div>
     </nav>

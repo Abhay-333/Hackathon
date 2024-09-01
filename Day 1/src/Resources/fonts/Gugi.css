@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Gugi';
+    src: url('../Resources/fonts/Gugi.ttf') format('truetype');
+  }
+  
+  .font-gugi {
+    font-family: 'Gugi', sans-serif;
+  }
