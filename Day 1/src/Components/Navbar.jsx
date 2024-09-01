@@ -15,16 +15,16 @@ const Navbar = () => {
   return (
     <nav className="navbar-custom px-4 lg:px-6 py-3 shadow-md w-full z-10 top-0">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-        <a href="#" className="flex items-center">
+        <div className="flex items-center">
           <div className="w-[100%] overflow-hidden rounded-md">
             {/* <img src={logo} className="mr-3" alt="Logo" /> */}
-            <h1 className="ffont-gugi uppercase">Virtual Vortex</h1>
+            <h1 className="font-gugi uppercase bg-[black] text-white py-2 px-5">Virtual Vortex</h1>
           </div>
 
           {/* <span className="self-center text-2xl font-semibold whitespace-nowrap">
             My Portfolio
           </span> */}
-        </a>
+        </div>
 
         <button
           onClick={toggleNavbar}
